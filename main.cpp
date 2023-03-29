@@ -10,6 +10,9 @@ int main(int argc, char *argv[])
 #endif
     QGuiApplication app(argc, argv);
 
+	/* This is expected to be used as app-id in Wayland */
+	app.setApplicationDisplayName("sys.app.homepop");
+
     qmlRegisterType<HomePop>("HomePopApp", 1, 0, "HomePop");
 
     QQmlApplicationEngine engine;
