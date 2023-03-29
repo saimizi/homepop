@@ -1,3 +1,7 @@
+extern "C" {
+	#include <jswmlib.h>
+}
+
 #include "homepop.h"
 
 HomePop::HomePop(QObject *parent): QObject(parent)
@@ -39,5 +43,12 @@ void HomePop::show_home()
 
 void HomePop::position_changed(int x, int y)
 {
-    emit this->mode_changed();
+	qDebug()<<"Notify JSWM position changed." << Qt::endl;
+
+	/*
+	 * Since the size is not changed, w and h are set to 0
+	 */
+	jswmcon_set_role_relative_pos(NULL, "INFO", x, y, 0, 0);
+
 }
+
