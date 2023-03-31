@@ -38,7 +38,7 @@ void HomePop::set_connection(bool connected)
 
 void HomePop::show_home()
 {
-    qDebug()<<"ShowHome!!"<<Qt::endl;
+    qDebug()<<"ShowHome!"<<Qt::endl;
 }
 
 void HomePop::position_changed(int x, int y)
