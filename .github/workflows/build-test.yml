@@ -16,7 +16,7 @@ jobs:
     - name: Install Qt packages
       run: |
            sudo apt update
-           sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake qml-module-qtquick-controls
+           sudo apt install -y qtcreator qtbase5-dev qt5-qmake cmake qml-module-qtquick-controls  qtdeclarative5-dev 
       shell: bash
     - name: Configure
       run: qmake
