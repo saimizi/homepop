@@ -13,7 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run:  qmake
-    - name: make
+    - name: Install Qt packages
+      run:  apt install -y qtcreator qtbase5-dev qt5-qmake cmake
+      shell: bash
+    - name: Configure
+      run: qmake
+    - name: Make
       run: make
