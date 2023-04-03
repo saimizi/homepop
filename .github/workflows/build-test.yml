@@ -2,9 +2,9 @@ name: build-test
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "action_test" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "action_test" ]
 
 jobs:
   build:
@@ -14,6 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build with rpi4-appsdk
-      run: docker run -v ${PWD}:/work -t joukan/rpi4-appsdk:latest
+      run: |
+        echo "Branch: ${GITHUB_REF#refs/heads/}"
+        docker run -v ${PWD}:/work -t joukan/rpi4-appsdk:latest
       shell: bash
     
