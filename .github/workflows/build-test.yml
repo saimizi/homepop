@@ -17,6 +17,7 @@ jobs:
       run: |
         echo "Branch: ${GITHUB_REF#refs/heads/}"
         echo "Working Dir: $(pwd)"
+        ls -Rl $(pwd)../
         # docker run -v ${PWD}:/work -t joukan/rpi4-appsdk:latest
       shell: bash
     
