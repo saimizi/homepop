@@ -16,6 +16,6 @@ jobs:
     - name: Build with rpi4-appsdk
       run: |
         echo "Branch: ${GITHUB_REF#refs/heads/}"
-        docker run -v ${PWD}:/work -t joukan/rpi4-appsdk:latest
+        # docker run -v ${PWD}:/work -t joukan/rpi4-appsdk:latest
       shell: bash
     
