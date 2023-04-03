@@ -1,10 +1,8 @@
-name: build-test
+name: CI check
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "stable/**" ]
 
 jobs:
   build:
